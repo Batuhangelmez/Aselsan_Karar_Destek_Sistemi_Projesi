@@ -1,0 +1,161 @@
+/* Ortak Aside Tasarımı */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+aside {
+  width: 250px;
+  background-color: #f0f4f8; /* Açık gri/mavi ton */
+  color: #003087; /* Ana mavi */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside .logo-container {
+  margin-bottom: 20px;
+}
+
+aside .logo-container img {
+  max-width: 100%;
+  height: auto;
+  max-height: 80px; /* Logo yüksekliği sınırlandırılmış */
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+aside nav ul li {
+  margin: 10px 0;
+}
+
+aside nav ul li a {
+  text-decoration: none;
+  color: #003087; /* Ana mavi */
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+aside nav ul li a:hover {
+  background-color: #003087; /* Ana mavi */
+  color: #f0f4f8; /* Açık gri/mavi ton */
+}
+
+@media (max-width: 768px) {
+  aside {
+    width: 60px;
+    padding: 10px;
+  }
+
+  aside .logo-container {
+    margin-bottom: 10px;
+  }
+
+  aside nav ul li a {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+main {
+  margin-left: 270px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.chart-container {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-controls {
+  margin-bottom: 15px;
+}
+
+.chart-controls label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.chart-controls select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  background-color: white;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="%23003087"><polygon points="70,105 20,35 120,35"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+  width: 300%; /* Başlangıç genişliği */
+  max-width: 300px; /* Maksimum genişlik */
+}
+
+.chart-controls select:focus {
+  border-color: #003087;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 48, 135, 0.5);
+}
+
+.chart-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #003087;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, width 0.3s;
+  width: 100px; /* Başlangıç genişliği */
+}
+
+
+.chart-controls button:hover {
+  background-color: #003087;
+}
+
+
+.chart-controls .dynamic-width {
+  width: auto; /* İçerik genişliğine göre ayarlama */
+  max-width: 300px; /* Maksimum genişlik */
+}
+
+.chart-info {
+  margin-top: 20px;
+}
+
+.chart-info h3 {
+  margin-bottom: 10px;
+}
+
+.chart-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.chart-info ul li {
+  background: #f9f9f9;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}

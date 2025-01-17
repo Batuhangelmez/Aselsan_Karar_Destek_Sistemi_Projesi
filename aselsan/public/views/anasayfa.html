@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aselsan Anasayfa</title>
+    <link rel="stylesheet" href="../css/anasayfa.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <aside>
+      <div class="logo-container">
+        <img src="../images/aselsan-logo.png" alt="Aselsan Logo" class="logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Kurumsal</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="ulkeler.html">Ülkeler</a></li>
+          <li><a href="login.html">Çıkış Yap</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="chart-section">
+        <div class="chart-controls">
+          <select id="region-select" class="modern-select">
+            <option value="" selected disabled>Bir Bölge Seçin</option>
+          </select>
+          <select id="platform-select" class="modern-select">
+            <option value="" selected disabled>Bir Platform Seçin</option>
+          </select>
+          <select id="product-select" class="modern-select">
+            <option value="" selected disabled>Bir Ürün Seçin</option>
+          </select>
+          <button id="apply-filters" class="modern-button">Seç</button>
+        </div>
+        <div class="chart-container">
+          <canvas id="trend-chart"></canvas>
+          <div class="chart-info">
+            <h3 style="text-align: center; color: #003087">
+              Bölge Bazında Ürüne Göre Yönelim Skoru Grafiği
+            </h3>
+            <ul id="trend-score-list"></ul>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <canvas id="risk-chart"></canvas>
+          <div class="chart-info">
+            <h3 style="text-align: center; color: #003087">
+              Bölge Bazında Jeopolitik Risk Grafiği
+            </h3>
+            <ul id="risk-score-list"></ul>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <h3 style="text-align: center; color: #003087">
+            Yönelim Skoru - Jeopolitik Risk Karşılaştırma Grafiği
+          </h3>
+          <canvas id="comparison-chart"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/anasayfa.js"></script>
+  </body>
+</html>
